@@ -1,0 +1,23 @@
+.history_box {
+	display: none;
+	position: absolute;
+	top: calc(100% + 5px);
+	left: 0;
+	min-height: 6.25rem;
+	max-height: 25rem;
+	border: 1px solid gray;
+	padding: 10px;
+	border-radius: 3px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+.history_box p:hover {
+	background-color: lightgray;
+	color: #fff;
+	cursor: pointer;
+}
+
+#demo {
+	display: inline-block;
+}

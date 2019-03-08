@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/history.css" />
+	</head>
+	<body>
+		<div id="demo">
+			<input id="search" />
+		</div>
+		<button id="search_btn">搜索</button>
+		
+		<script src="js/jq-3-3-1.js"></script>
+		<script>
+			window.History = {};
+		</script>
+		<script src="js/history.js"></script>
+		<script>
+			var myHistory = new Hostory("#demo", "#search", {
+				searchBtn: "#search_btn",
+				width: 300,
+				radius:5
+			});
+		</script>
+	</body>
+</html>
