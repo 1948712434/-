@@ -40,6 +40,7 @@
 		//展开历史记录容量器
 		$(that.searchInp).on("focus", function() {
 			$historyBox = $(".history_box");
+			$historyBox.html("");
 			//是否存放过历史记录
 			if (localStorage.historyList) {
 				var list = JSON.parse(localStorage.historyList);
@@ -71,10 +72,10 @@
 					var localList = JSON.parse(localStorage.historyList);
 					//如果存放条数超哥50,则删除最后一条
 					if (localList.length >= 30) {
-						localList.shift();
-						localList.push(val);
+						localList.pop();
+						localList.unshift(val);
 					} else {
-						localList.push(val);
+						localList.unshift(val);
 					}
 
 					//存放到本地
